@@ -1,6 +1,6 @@
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js') // Ajuste o caminho conforme necessário
+        navigator.serviceWorker.register('service-worker.js') // Ajuste o caminho conforme necessário
             .then(registration => {
                 console.log('Service Worker registrado com sucesso:', registration);
             })
@@ -12,12 +12,10 @@ if ('serviceWorker' in navigator) {
 
 let exerciseActive = false;
 
-
 document.getElementById('startExercise').addEventListener('click', () => {
     exerciseActive = true;
     document.getElementById('output').innerText = "Exercício iniciado!";
 });
-
 
 document.getElementById('takePhoto').addEventListener('click', async () => {
     if (exerciseActive) {
@@ -35,14 +33,11 @@ document.getElementById('takePhoto').addEventListener('click', async () => {
             context.drawImage(video, 0, 0, canvas.width, canvas.height);
             const imageData = canvas.toDataURL('image/png');
 
-            
             const img = document.createElement('img');
             img.src = imageData;
-            img.className = 'captured-image'; 
+            img.className = 'captured-image';
 
-            
             document.getElementById('output').appendChild(img);
-
             stream.getTracks().forEach(track => track.stop());
             video.remove();
         });
@@ -50,7 +45,6 @@ document.getElementById('takePhoto').addEventListener('click', async () => {
         alert("Inicie um exercício primeiro!");
     }
 });
-
 
 document.getElementById('getLocation').addEventListener('click', () => {
     if (exerciseActive) {
