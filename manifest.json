@@ -1,20 +1,36 @@
 {
-    "name": "Controle de Exercícios",
-    "short_name": "Exercícios",
-    "start_url": ".",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#4CAF50",
-    "icons": [
-        {
-            "src": "icon-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "icon-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ]
+  "name": "Controle de Exercícios",
+  "short_name": "Exercícios",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b429d",
+  "icons": [
+    {
+      "src": "icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "id": "excer",
+  "description": "Um app para você se exercitar",
+  "lang": "pt",
+  "orientation": "landscape",
+  "categories": [
+    "education",
+    "fitness",
+    "security",
+    "social",
+    "travel"
+  ],
+  "display_override": [
+    "browser",
+    "fullscreen",
+    "window-controls-overlay"
+  ]
 }
